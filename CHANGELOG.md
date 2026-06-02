@@ -139,6 +139,33 @@ Released May 08, 2026
 - [@zhong-dbtlabs](https://github.com/zhong-dbtlabs) ([#1590](https://github.com/dbt-labs/dbt-fusion/issues/1590), [#884](https://github.com/dbt-labs/dbt-fusion/issues/884), [#1086](https://github.com/dbt-labs/dbt-fusion/issues/1086))
 
 
+## 2.0.0-preview.183
+
+Released June 01, 2026
+
+### Fixes
+
+- [dbt-index] Preserve runtime invocation/run-result timestamps during direct fusion metadata ingest so dbt_rt.invocations.generated_at and dbt_rt.run_results.created_at are populated again
+- [dbt-fusion] Fix /api/v1/search returning 500 when dbt_rt.run_results parquet is absent (project never run with --use-index)
+- [dbt-fusion] dbt State auth no longer caches the organization ID; it is always resolved from the live token scope, avoiding unnecessary browser re-authentication when a user's organization access changes between invocations
+
+### Under the Hood
+
+- [dbt-fusion] Manifest parity with core fixes for groups
+- [dbt-fusion] Serialize external and its subfields for manifest parity with Core
+- [internal] Enable push and daily schedule triggers for auto-run copybara dbt-core sync workflow
+- [dbt-fusion] Execute hooks on dbt State reuse
+- [dbt-fusion] Bump dbt-docs-v2 UI bundle to add dbt State banner (a0c6c196807e9e6f2b9ea4fa953e99c2d1031657)
+
+### Contributors
+- [@ajhlee-dbt](https://github.com/ajhlee-dbt)
+- [@eakmanrq](https://github.com/eakmanrq)
+- [@izeigerman](https://github.com/izeigerman)
+- [@jcserv](https://github.com/jcserv)
+- [@kczimm](https://github.com/kczimm)
+- [@tauhid621](https://github.com/tauhid621)
+
+
 ## 2.0.0-preview.182
 
 Released June 01, 2026
