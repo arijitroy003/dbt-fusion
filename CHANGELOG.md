@@ -139,6 +139,26 @@ Released May 08, 2026
 - [@zhong-dbtlabs](https://github.com/zhong-dbtlabs) ([#1590](https://github.com/dbt-labs/dbt-fusion/issues/1590), [#884](https://github.com/dbt-labs/dbt-fusion/issues/884), [#1086](https://github.com/dbt-labs/dbt-fusion/issues/1086))
 
 
+## 2.0.0-preview.185
+
+Released June 03, 2026
+
+### Features
+
+- [dbt-fusion] GET /api/v1/models: add catalog field (row_count_stat, bytes_stat, last_modified_stat from warehouse INFORMATION_SCHEMA) and materialized field; dbt build --write-index now queries warehouse catalog stats and writes them to the parquet index
+- [dbt-fusion] (fabric) supports dbt init
+- [dbt-fusion] Add .sqlfluffignore support to lint.
+- [dbt-fusion] List lint in the top-level help output.
+
+### Fixes
+
+- [dbt-fusion] update try_or_compiler_error to match dbt-core
+- [dbt-fusion] Fix manifest deserialization for fields that are not present
+
+### Contributors
+- [@ajhlee-dbt](https://github.com/ajhlee-dbt)
+
+
 ## 2.0.0-preview.184
 
 Released June 02, 2026
