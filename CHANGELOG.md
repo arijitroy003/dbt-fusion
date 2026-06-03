@@ -139,6 +139,35 @@ Released May 08, 2026
 - [@zhong-dbtlabs](https://github.com/zhong-dbtlabs) ([#1590](https://github.com/dbt-labs/dbt-fusion/issues/1590), [#884](https://github.com/dbt-labs/dbt-fusion/issues/884), [#1086](https://github.com/dbt-labs/dbt-fusion/issues/1086))
 
 
+## 2.0.0-preview.184
+
+Released June 02, 2026
+
+### Fixes
+
+- [dbt-fusion] Fix Databricks panic when flattening `STRUCT` keys that were not string.
+- [dbt-core] Fix YAML selector `selector:` shorthand being silently ignored inside exclude/union, and fix nested `exclude` being dropped from the serialized manifest ([#15140](https://github.com/dbt-labs/dbt-fusion/issues/15140))
+- [dbt-fusion] Show a clear warning when dbt_cloud.yml fails to parse instead of a misleading 'no credentials configured' error
+- [dbt-fusion] Do not panic in schema hydration if a getting a canonical fqn has an error
+- [dbt-fusion] Read DuckDB catalog column_index as a 32-bit integer instead of a decimal, fixing a type-mismatch error when collecting DuckDB column metadata
+- [dbt-fusion] Disable dbt State for unsupported adapters
+- [dbt-fusion] Fix manifest deserialization failing on no configs
+
+### Under the Hood
+
+- [dbt-fusion] Remove "models" path segment in computed fqn for manifest parity with Core
+- [dbt-fusion] Improve ClickHouse init: remove database and make password optional ([#1679](https://github.com/dbt-labs/dbt-fusion/issues/1679))
+- [internal] Add a dedicated dbt Core changelog (CHANGELOG-dbtcore.md) and sync it through copybara so dbt-core publishes its own changelog, starting at 2.0.0-alpha.1, separate from the dbt-fusion changelog
+
+### Contributors
+- [@ajhlee-dbt](https://github.com/ajhlee-dbt)
+- [@kczimm](https://github.com/kczimm)
+- [@koletzilla](https://github.com/koletzilla) ([#1679](https://github.com/dbt-labs/dbt-fusion/issues/1679))
+- [@lottaquestions](https://github.com/lottaquestions) ([#15140](https://github.com/dbt-labs/dbt-fusion/issues/15140))
+- [@serramatutu](https://github.com/serramatutu)
+- [@tauhid621](https://github.com/tauhid621)
+
+
 ## 2.0.0-preview.183
 
 Released June 01, 2026
