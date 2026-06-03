@@ -139,6 +139,22 @@ Released May 08, 2026
 - [@zhong-dbtlabs](https://github.com/zhong-dbtlabs) ([#1590](https://github.com/dbt-labs/dbt-fusion/issues/1590), [#884](https://github.com/dbt-labs/dbt-fusion/issues/884), [#1086](https://github.com/dbt-labs/dbt-fusion/issues/1086))
 
 
+## 2.0.0-preview.186
+
+Released June 03, 2026
+
+### Features
+
+- [dbt-fusion] Detect how dbt was installed (Homebrew, pip, winget, or the standalone installer) and surface the matching upgrade command; `dbt system update` now refuses to overwrite a binary managed by a package manager unless `--force` is passed.
+
+### Fixes
+
+- [dbt-fusion] Fixed lineage using un-quoted FQNs
+
+### Contributors
+- [@tauhid621](https://github.com/tauhid621)
+
+
 ## 2.0.0-preview.185
 
 Released June 03, 2026
